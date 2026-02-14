@@ -1,0 +1,196 @@
+:root {
+    --coffee-dark: #3e2723;
+    --coffee-medium: #6F4E37;
+    --coffee-light: #C4A484;
+    --coffee-accent: #D2B48C;
+    --coffee-cream: #f5f5DC;
+    --coffee-gold: #D4AF37;
+    --text-dark: #2C2416;
+    --text-light: #f3f3f3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--coffee-cream);
+    color: var(--text-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background: #161515;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}    
+
+.logo-icon {
+    font-size: 28px;
+    color: var(--coffee-gold);
+}
+
+.logo-text {
+    font-family: playfair display, serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--coffee-medium);
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    color: var(--coffee-gold);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--coffee-medium);
+    font-size: 16px;
+    position: relative;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+nav a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--coffee-gold);
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+    -moz-transition: width 0.3s ease;
+    -ms-transition: width 0.3s ease;
+    -o-transition: width 0.3s ease;
+}
+
+nav a:hover:after {
+    width: 100%;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.btn-primary {
+    background-color: var(--coffee-medium);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--coffee-dark);
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+}
+
+;btn-secondary {
+    background-color: transparent;
+    color: var(--coffee-medium);
+    border: 2px solid var(--coffee-medium);
+}
+
+.btn-secondary:hover {
+    background: rgba(121, 78, 55, 0.05);
+    color: var(--text-light);
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0B0705 0%, #010000 100%);
+    z-index: -1;
+}
+
+.her-content {
+    width: 750px;
+    animation: fadeInUp 1s ease forwards;
+    color: var(--text-light);
+    -webkit-animation: fadeInUp 1s ease forwards;
+}
+
